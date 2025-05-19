@@ -5,6 +5,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    background: #181920;
+    color: #f1f1f1;
 }
 
 footer {
@@ -12,56 +14,236 @@ footer {
     margin-top: auto;
 }
 
-.navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.main-content-centered {
+    flex: 1 0 auto;  /* This is crucial! For Fotter at bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    padding-top: 1.5rem;
 }
-
-.navbar-nav .nav-link:hover {
-    color: #0d6efd !important; /* Bootstrap primary color */
+.conversion-box {
+    background: #232339;
+    color: rgb(0, 181, 66);
+    border-radius: 1rem;
+    padding: 0.25rem 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border: 1.5px solid #2f2f44;
+    box-shadow: 0 2px 12px 0 #23233933;
 }
-
-.lottery-card {
-    background-color: #232323;
-    color: #03ff03;
+.timer {
+    background: #1f1f2e;
+    color: rgb(0, 181, 66);
+    font-size: 1.22rem;
+    font-weight: 600;
+    border-radius: 0.85rem;
+    border: 1.5px solid #2c2c39;
+    display: inline-block;
+    padding: 0.65rem 1.7rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 24px 0 #00b54233;
 }
-
-.lottery-item {
-    background-color: #d4edda;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 5px 0;
+.card.lottery-leaderboard {
+    max-width: 660px;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    background: linear-gradient(110deg, #232339 70%, #222f22 100%);
+    border-radius: 2.1rem;
+    border: 2.5px solid rgb(0, 181, 66);
+    box-shadow: 0 0 0 6px #00b54222, 0 4px 54px 0 #00b54242;
+    color: #f1f1f1;
+    padding: 1.6rem 1.2rem 2.5rem 1.2rem;
+    position: relative;
+    transition: box-shadow 0.3s;
 }
-
-
-        /* HIGHLIGHT: Monthly leaderboard scroll styling */
-        .monthly-scroll-container {
-            max-height: 380px;
-            overflow-y: auto;
-            margin-bottom: 1rem;
-            margin-top: 0.25rem;
-            padding-right: 0.5rem;
-        }
-        /* Hide scroll bar but still allow scroll */
-        .monthly-scroll-container::-webkit-scrollbar {
-            width: 8px;
-            background: #232339;
-        }
-        .monthly-scroll-container::-webkit-scrollbar-thumb {
-            background: #181920;
-            border-radius: 4px;
-        }
-        /* For Firefox */
-        .monthly-scroll-container {
-            scrollbar-color: #181920 #232339;
-            scrollbar-width: thin;
-        }
-        @media (min-width: 1200px) {
-            .monthly-scroll-container {
-                max-height: 520px;
-            }
-        }
-        @media (max-width: 600px) {
-            .monthly-scroll-container {
-                max-height: 250px;
-            }
-        }
+.card.lottery-leaderboard:hover {
+    box-shadow: 0 0 0 12px #00b54255, 0 8px 68px 0 #00b54281;
+}
+.leaderboard-header {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    color: rgb(0, 181, 66);
+    text-shadow: 0 0 15px #00b54290, 0 2px 0 #222;
+    margin-bottom: 0.6rem;
+    margin-top: -0.6rem;
+}
+.ticket-counter-badge {
+    position: absolute;
+    top: -1.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #181920;
+    color: rgb(0, 181, 66);
+    border-radius: 2rem;
+    box-shadow: 0 2px 8px 0 #00b54233;
+    padding: 0.17rem 1.1rem 0.17rem 1.1rem;
+    font-size: 1.08rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    z-index: 2;
+    border: 2px solid rgb(0, 181, 66);
+    transition: box-shadow 0.2s;
+}
+.ticket-counter-badge .ticket-icon {
+    color: gold;
+    font-size: 1.28rem;
+    margin-right: 0.23rem;
+    filter: drop-shadow(0 0 2.5px #ffec8b);
+}
+.ticket-counter-badge .ticket-count {
+    font-size: 1.08rem;
+    color: rgb(0, 181, 66);
+    font-weight: 900;
+    margin-right: 0.12rem;
+}
+.ticket-counter-badge .ticket-label {
+    font-size: 0.96rem;
+    color: #f1f1f1;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-left: 0.35rem;
+}
+.nav-tabs {
+    border: none;
+    justify-content: center;
+    margin-bottom: 1.6rem !important;
+}
+.nav-tabs .nav-link {
+    background: #232339;
+    color: rgb(0, 181, 66);
+    border: none;
+    font-weight: 700;
+    font-size: 1.18rem;
+    margin: 0 0.12rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 0.75rem 3.8rem;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    color: #232339 !important;
+    background: rgb(0, 181, 66) !important;
+}
+.list-group-item {
+    background: transparent !important;
+    color: #f1f1f1;
+    border: none;
+    font-size: 1.13rem;
+    font-weight: 600;
+    padding: 0.75rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.list-group-item .leaderboard-place {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 2.3em;
+    font-weight: 800;
+    font-size: 1.2em;
+    margin-right: 0.7em;
+    text-align: left;
+}
+.list-group-item .medal {
+    font-size: 1.37em;
+    margin-right: 0.16em;
+    vertical-align: middle;
+}
+.medal-gold {
+    color:  #FFD700;
+    filter: drop-shadow(0 0 2px #FFD70088);
+}
+.medal-silver {
+    color: #C0C0C0;
+    filter: drop-shadow(0 0 2px #C0C0C088);
+}
+.medal-bronze {
+    color: #cd7f32;
+    filter: drop-shadow(0 0 2px #cd7f3288);
+}
+.list-group-item .winner-name {
+    flex: 1 1 auto;
+    text-align: left;
+}
+.list-group-item .text-success {
+    color: rgb(0, 181, 66) !important;
+    font-weight: 800;
+}
+.card-title {
+    color: rgb(0, 181, 66);
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 0.4em;
+}
+.monthly-scroll-container {
+    max-height: 340px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+    padding-right: 0.5rem;
+}
+.monthly-scroll-container::-webkit-scrollbar {
+    width: 8px;
+    background: #232339;
+}
+.monthly-scroll-container::-webkit-scrollbar-thumb {
+    background: #181920;
+    border-radius: 4px;
+}
+.monthly-scroll-container {
+    scrollbar-color: #181920 #232339;
+    scrollbar-width: thin;
+}
+.navbar, .footer, footer {
+    background: #2a2a2a !important; /* Change Header / footer color */
+    color: rgb(0, 181, 66) !important;
+}
+.footer p, footer p, .navbar-brand, .navbar-nav .nav-link, .navbar-nav .nav-link.active {
+    color: rgb(0, 181, 66) !important;
+}
+.footer p {
+    margin-bottom: 0;
+}
+@media (max-width: 900px) {
+    .card.lottery-leaderboard {
+        max-width: 98vw;
+        padding: 1.1rem 0.7rem 1.5rem 0.7rem;
+    }
+    .ticket-counter-badge {
+        font-size: 0.98rem;
+        padding: 0.13rem 0.7rem;
+    }
+    .leaderboard-header {
+        font-size: 1.4rem;
+    }
+    .nav-tabs .nav-link {
+        padding: 0.5rem 1.5rem;
+        font-size: 1.01rem;
+    }
+    .monthly-scroll-container {
+        max-height: 160px;
+    }
+}
+@media (max-width: 600px) {
+    .ticket-counter-badge {
+        font-size: 0.88rem;
+        padding: 0.09rem 0.4rem;
+    }
+    .leaderboard-header {
+        font-size: 1.2rem;
+    }
+    .monthly-scroll-container {
+        max-height: 100px;
+    }
+}
