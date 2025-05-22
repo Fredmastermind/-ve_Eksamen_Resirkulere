@@ -1,0 +1,44 @@
+{
+    "event": {
+        "weeklyDrawDate": "2025-05-23T17:00:00+02:00",
+        "monthlyDrawDate": "2025-06-07T17:00:00+02:00"
+    },
+    "user": {
+        "weeklyTickets": 8,
+        "monthlyTickets": 43
+    },
+    "weeklyWinners": [
+        { "name": "Herm",    "amount": "1000 kr" },
+        { "name": "Fredrik", "amount": "500 kr" },
+        { "name": "Anna",    "amount": "250 kr" },
+        { "name": "Lisa",    "amount": "100 kr" },
+        { "name": "John",    "amount": "50 kr" }
+    ],
+    "monthlyWinners": [
+        { "name": "Herm",    "amount": "5000 kr" },
+        { "name": "Fredrik", "amount": "3000 kr" },
+        { "name": "Anna",    "amount": "2000 kr" },
+        { "name": "Lisa",    "amount": "1500 kr" },
+        { "name": "John",    "amount": "1000 kr" },
+        { "name": "Emily",   "amount": "750 kr"  },
+        { "name": "Ola",     "amount": "600 kr"  },
+        { "name": "Petra",   "amount": "500 kr"  },
+        { "name": "Magnus",  "amount": "400 kr"  },
+        { "name": "Sara",    "amount": "350 kr"  },
+        { "name": "Tom",     "amount": "300 kr"  },
+        { "name": "Maja",    "amount": "250 kr"  },
+        { "name": "Nina",    "amount": "200 kr"  },
+        { "name": "Elias",   "amount": "150 kr"  },
+        { "name": "Per",     "amount": "100 kr"  },
+        { "name": "Lars",    "amount": "100 kr"  },
+        { "name": "Sofie",   "amount": "100 kr"  },
+        { "name": "Morten",  "amount": "100 kr"  },
+        { "name": "Julie",   "amount": "100 kr"  },
+        { "name": "Erik",    "amount": "100 kr"  },
+        { "name": "Kristin", "amount": "100 kr"  },
+        { "name": "Henrik",  "amount": "100 kr"  },
+        { "name": "Camilla", "amount": "100 kr"  },
+        { "name": "Martin",  "amount": "100 kr"  },
+        { "name": "Ida",     "amount": "100 kr"  }
+    ]
+}
